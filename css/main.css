@@ -2,6 +2,9 @@ body {
     margin: 60px auto;
     width: 70%;
     background-image: url("../assets/anand.png");
+     background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
