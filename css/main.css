@@ -1,6 +1,7 @@
 body {
     margin: 60px auto;
     width: 70%;
+    font:white;
     background-image: url("../assets/background.jpg");
      background-repeat: no-repeat;
   background-attachment: fixed; 
