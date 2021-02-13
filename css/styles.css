@@ -480,7 +480,7 @@ mark,
   object-fit: contain;
   
 }
-.figcaption {
+figcaption {
   background-color: black;
   color: white;
   font-style: italic;
