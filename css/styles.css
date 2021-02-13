@@ -479,7 +479,13 @@ mark,
   height: 20vw;
   object-fit: contain;
 }
-
+.figcaption {
+  background-color: black;
+  color: white;
+  font-style: italic;
+  padding: 2px;
+  text-align: center;
+}
 .img-thumbnail {
   padding: 0.25rem;
   background-color: #fff;
