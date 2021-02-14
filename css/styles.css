@@ -481,10 +481,11 @@ mark,
   
 }
 figcaption {
-  
+  background-color: grey;
   color: black;
   font-style: italic;
   padding: 2px;
+  font:20;
   text-align: center;
 }
 .img-thumbnail {
