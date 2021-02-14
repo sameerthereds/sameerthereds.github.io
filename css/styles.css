@@ -485,7 +485,7 @@ figcaption {
   color: black;
   font-style: italic;
   padding: 2px;
-  font:20;
+  font: 20px;
   text-align: center;
 }
 .img-thumbnail {
