@@ -345,6 +345,15 @@
                             sameerthereds@gmail.com
                         </p>
                     </div>
+
+                    <div class="col-lg-4 mb-5 mb-lg-0">
+                        <h4 class="text-uppercase mb-4">Github</h4>
+                        <div style="text-align: center; margin-top: 20px;">
+                            <a href="https://github.com/sameerthereds?tab=repositories">
+                                <button class="icontext"><img src="assets/GitHub-Mark-Light-120px-plus.png" width="30px" style="margin-right: 10px;">View all in GitHub</button>
+                            </a>
+                        </div>
+                    </div>
                     <!-- Footer Social Icons-->
                     <div class="col-lg-4 mb-5 mb-lg-0">
                         <h4 class="text-uppercase mb-4">Digital Media Presence</h4>
@@ -373,40 +382,8 @@
 
 
 
-        <div id="repostab" class="page-section">
-            <div style="text-align: center; margin-top: 20px;">
-                <a href="https://github.com/HiDe-Techno-Tips?tab=repositories">
-                    <button class="icontext"><img src="assets/GitHub-Mark-Light-120px-plus.png" width="30px" style="margin-right: 10px;">View all in GitHub</button>
-                </a>
-            </div>
-        </div>
-        
-     
-        
-        <script>
-        pinElement = document.getElementById("pin");
-        
-        gitpin("https://api.github.com/repos/HiDe-Techno-Tips/Blackeye-for-Windows", "repo", pinElement);
-        gitpin("https://api.github.com/repos/HiDe-Techno-Tips/Windows-Activator", "repo", pinElement);
-        gitpin("https://api.github.com/repos/HiDe-Techno-Tips/Mouse2Gamepad_for_Yuzu", "repo", pinElement);
-        gitpin("https://api.github.com/repos/HiDe-Techno-Tips/yuzu-Early-Access-Launcher", "repo", pinElement);
-        
-        gitpin("https://api.github.com/gists/49a3cd23e9a931eb8920423a0fb3668a", "gist", pinElement);
-        gitpin("https://api.github.com/gists/e09340eae2861e1ad8b7f6bdba5ee9ff", "gist", pinElement);
-        gitpin("https://api.github.com/gists/eb8704e2da1d98240153165743960e17", "gist", pinElement);
-        
-        const loaded = new Event("loaded");
-        
-        listrepos("HiDe-Techno-Tips", document.getElementById("repostab")).then(reposcount => {
-            document.getElementById("repos").innerHTML = document.getElementById("repos").innerHTML + " <span>" + reposcount.toString() + "</span>";
-            document.dispatchEvent(loaded);
-        });
-        
-        listgists("HimDek", document.getElementById("giststab")).then(gistscount => {
-            document.getElementById("gists").innerHTML = document.getElementById("gists").innerHTML + " <span>" + gistscount.toString() + "</span>";
-            document.dispatchEvent(loaded);
-        });
-        </script>
+   
+    
 
 
 
