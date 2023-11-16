@@ -368,8 +368,55 @@
         </footer>
         <!-- Copyright Section-->
         <div class="copyright py-4 text-center text-white">
-            <div class="container"><small>Copyright © 2021</small></div>
+            <div class="container"><small>Copyright © 2023</small></div>
         </div>
+
+
+
+        <div id="repostab" class="tabcontent">
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://github.com/HiDe-Techno-Tips?tab=repositories">
+                    <button class="icontext"><img src="assets/GitHub-Mark-Light-120px-plus.png" width="30px" style="margin-right: 10px;">View all in GitHub</button>
+                </a>
+            </div>
+        </div>
+        
+        <div id="giststab" class="tabcontent">
+            <div style="text-align: center; margin-top: 20px;">
+                <a href="https://gist.github.com/HimDek">
+                    <button>View all Gists</button>
+                </a>
+            </div>
+        </div>
+        
+        <script>
+        pinElement = document.getElementById("pin");
+        
+        gitpin("https://api.github.com/repos/HiDe-Techno-Tips/Blackeye-for-Windows", "repo", pinElement);
+        gitpin("https://api.github.com/repos/HiDe-Techno-Tips/Windows-Activator", "repo", pinElement);
+        gitpin("https://api.github.com/repos/HiDe-Techno-Tips/Mouse2Gamepad_for_Yuzu", "repo", pinElement);
+        gitpin("https://api.github.com/repos/HiDe-Techno-Tips/yuzu-Early-Access-Launcher", "repo", pinElement);
+        
+        gitpin("https://api.github.com/gists/49a3cd23e9a931eb8920423a0fb3668a", "gist", pinElement);
+        gitpin("https://api.github.com/gists/e09340eae2861e1ad8b7f6bdba5ee9ff", "gist", pinElement);
+        gitpin("https://api.github.com/gists/eb8704e2da1d98240153165743960e17", "gist", pinElement);
+        
+        const loaded = new Event("loaded");
+        
+        listrepos("HiDe-Techno-Tips", document.getElementById("repostab")).then(reposcount => {
+            document.getElementById("repos").innerHTML = document.getElementById("repos").innerHTML + " <span>" + reposcount.toString() + "</span>";
+            document.dispatchEvent(loaded);
+        });
+        
+        listgists("HimDek", document.getElementById("giststab")).then(gistscount => {
+            document.getElementById("gists").innerHTML = document.getElementById("gists").innerHTML + " <span>" + gistscount.toString() + "</span>";
+            document.dispatchEvent(loaded);
+        });
+        </script>
+
+
+
+
         <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes)-->
         <div class="scroll-to-top d-lg-none position-fixed">
             <a class="js-scroll-trigger d-block text-center text-white rounded" href="#page-top"><i class="fa fa-chevron-up"></i></a>
