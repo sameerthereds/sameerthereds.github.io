@@ -25,12 +25,13 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
 		<style>
-			.project-container {
-				max-width: 900px; /* Sets a readable width */
-				margin: 50px auto; /* Centers the table */
-				padding: 20px; /* Adds padding */
+			/* Container for better alignment */
+			.content-container {
+				max-width: 900px; /* Limits width for readability */
+				margin: 120px auto; /* Centers the content with top margin */
+				padding: 20px; /* Adds padding around */
 				background-color: #ffffff; /* White background */
-				border-radius: 10px; /* Rounded edges */
+				border-radius: 10px; /* Rounded corners */
 				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 			}
 		
@@ -39,37 +40,26 @@
 				border-collapse: collapse;
 			}
 		
-			th, td {
-				padding: 15px 20px;
-				text-align: left;
+			td {
+				padding: 15px 20px; /* Adds padding inside each cell */
 				vertical-align: top;
 			}
 		
-			/* Organization Row Styling */
-			tr.organization {
-				background-color: #2c3e50; /* Dark blue-gray */
-				color: white;
-				font-weight: bold;
-				font-size: 1.1em;
-				text-transform: uppercase;
-			}
-		
-			/* Project Header Styling */
-			td.project-header {
+			td:first-child {
 				font-weight: bold;
 				width: 30%;
-				background-color: #ecf0f1; /* Light gray */
-				border-right: 3px solid #bdc3c7;
+				background-color: #f2f2f2; /* Light gray for section headers */
+				border-right: 3px solid #d9d9d9; /* Separator for clarity */
+				padding-left: 25px;
 			}
 		
-			a {
-				color: #007bff;
-				text-decoration: none;
-				font-weight: bold;
+			ul {
+				padding-left: 20px; /* Indents bullet points */
+				margin: 5px 0;
 			}
 		
-			a:hover {
-				text-decoration: underline;
+			li {
+				margin-bottom: 5px; /* Adds spacing between list items */
 			}
 		</style>
 	</head>
