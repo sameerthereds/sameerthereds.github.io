@@ -25,13 +25,12 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
 		<style>
-			/* Container for better alignment */
-			.content-container {
-				max-width: 900px; /* Limits width for readability */
-				margin: 120px auto; /* Centers the content with top margin */
-				padding: 20px; /* Adds padding around */
+			.project-container {
+				max-width: 900px; /* Sets a readable width */
+				margin: 50px auto; /* Centers the table */
+				padding: 20px; /* Adds padding */
 				background-color: #ffffff; /* White background */
-				border-radius: 10px; /* Rounded corners */
+				border-radius: 10px; /* Rounded edges */
 				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
 			}
 		
@@ -40,26 +39,37 @@
 				border-collapse: collapse;
 			}
 		
-			td {
-				padding: 15px 20px; /* Adds padding inside each cell */
+			th, td {
+				padding: 15px 20px;
+				text-align: left;
 				vertical-align: top;
 			}
 		
-			td:first-child {
+			/* Organization Row Styling */
+			tr.organization {
+				background-color: #2c3e50; /* Dark blue-gray */
+				color: white;
+				font-weight: bold;
+				font-size: 1.1em;
+				text-transform: uppercase;
+			}
+		
+			/* Project Header Styling */
+			td.project-header {
 				font-weight: bold;
 				width: 30%;
-				background-color: #f2f2f2; /* Light gray for section headers */
-				border-right: 3px solid #d9d9d9; /* Separator for clarity */
-				padding-left: 25px;
+				background-color: #ecf0f1; /* Light gray */
+				border-right: 3px solid #bdc3c7;
 			}
 		
-			ul {
-				padding-left: 20px; /* Indents bullet points */
-				margin: 5px 0;
+			a {
+				color: #007bff;
+				text-decoration: none;
+				font-weight: bold;
 			}
 		
-			li {
-				margin-bottom: 5px; /* Adds spacing between list items */
+			a:hover {
+				text-decoration: underline;
 			}
 		</style>
 	</head>
@@ -89,112 +99,61 @@
 
 		</header>
 
-		<div class="content-container">
+		<div class="project-container">
 			<table>
-				<tr>
-					<td>Research Interests</td>
-					<td>Mobile Health, Wearables, Human-Computer Interaction, Machine Learning, AI, LLMs, and Data Visualizations</td>
+				<!-- University of Memphis -->
+				<tr class="organization">
+					<td colspan="2">University of Memphis (Graduate Research Assistant, Aug 2018 - Present)</td>
 				</tr>
-				
 				<tr>
-					<td>Education</td>
-					<td>
-						<ul>
-							<li><strong>University of Memphis</strong>, PhD in Computer Science, Aug 2018 – Dec 2025</li>
-							<li><strong>Jawaharlal Nehru Technological University Anantapur (JNTUA)</strong>, B.Tech in Electronics and Communication Engineering, June 2010 - June 2014</li>
-						</ul>
-					</td>
+					<td class="project-header">RELIEF Study</td>
+					<td>Leading the <a href="https://reliefstudy.mdotcenter.org" target="_blank">RELIEF Study</a>, integrating wearable AI and LLMs for personalized stress interventions.</td>
 				</tr>
-		
 				<tr>
-					<td>Experience</td>
-					<td>
-						<strong>University of Memphis</strong>
-						<ul>
-							<li>Graduate Research Assistant, Aug 2018 - Present</li>
-							<li>Leading the RELIEF Study, integrating wearable AI and LLMs for personalized stress interventions.</li>
-							<li>Led the nationwide MOODS Study, achieving a 10% reduction in self-reported stress and 14 behavior modifications.</li>
-							<li>Developed Personal Informatics System with 16 visualizations to promote self-reflection and user engagement.</li>
-						</ul>
-						<strong>OpenText, Hyderabad, India</strong>
-						<ul>
-							<li>Senior Software Engineer, June 2014 - May 2018</li>
-							<li>Developed enterprise-level medical records image capture and retrieval software used by major healthcare organizations.</li>
-							<li>Engineered solutions to implement roadmap initiatives and customer-driven feature requests.</li>
-						</ul>
-					</td>
+					<td class="project-header">MOODS Study</td>
+					<td>Led the nationwide <a href="https://moods.md2k.org/" target="_blank">MOODS Study</a> with 122 participants, achieving a 10% reduction in stress and 14 behavior modifications (<a href="https://dl.acm.org/doi/10.1145/3613904.3642662" target="_blank">CHI 2024</a>).</td>
+				</tr>
+				<tr>
+					<td class="project-header">Personal Informatics System</td>
+					<td>Developed <a href="https://moods.md2k.org/results" target="_blank">a Personal Informatics System</a> with 16 visualizations to enhance self-reflection and engagement.</td>
+				</tr>
+				<tr>
+					<td class="project-header">Pulse-PPG</td>
+					<td>Co-authored Pulse-PPG, the first open-source PPG foundation model trained on raw PPG data collected over a 100-day field study with 120 participants (<a href="https://arxiv.org/pdf/2502.01108" target="_blank">Paper</a>).</td>
 				</tr>
 		
+				<!-- OpenText -->
+				<tr class="organization">
+					<td colspan="2">OpenText (Senior Software Engineer, June 2014 - May 2018)</td>
+				</tr>
 				<tr>
-					<td>Projects</td>
-					<td>
-						<ul>
-							<li>Movie Recommendation System leveraging content-based and collaborative filtering (GitHub).</li>
-							<li>Sentiment analysis model for COVID-19 vaccine tweets (GitHub).</li>
-							<li>Custom search engine for University of Memphis using NLP (GitHub).</li>
-						</ul>
-					</td>
+					<td class="project-header">Medical Records Software</td>
+					<td>Developed enterprise-level medical records image capture and retrieval software using Microsoft .NET, used by major healthcare organizations including Mayo Clinic.</td>
+				</tr>
+				<tr>
+					<td class="project-header">Enterprise Feature Development</td>
+					<td>Implemented roadmap initiatives and customer-driven feature requests, improving software functionality and user satisfaction.</td>
 				</tr>
 		
-				<tr>
-					<td>Skills</td>
-					<td>
-						<ul>
-							<li>Programming: Python, Java, .NET, R, SQL, Oracle, LaTeX, Matlab</li>
-							<li>Frameworks: NumPy, Scikit-learn, PyTorch, TensorFlow, HuggingFace, AWS</li>
-							<li>Machine Learning: LLMs, Transformers, CNNs, RNNs, Time-series models</li>
-						</ul>
-					</td>
+				<!-- Personal Projects -->
+				<tr class="organization">
+					<td colspan="2">Personal Projects</td>
 				</tr>
-		
 				<tr>
-					<td>Certifications</td>
-					<td>
-						<ul>
-							<li>Generative AI with Large Language Models (DeepLearning.AI)</li>
-							<li>DeepLearning Specialization (DeepLearning.AI)</li>
-						</ul>
-					</td>
+					<td class="project-header">Movie Recommendation System</td>
+					<td>Designed a movie recommendation system using content-based and collaborative filtering (<a href="https://github.com/sameerthereds/Movie-Recommendation-System" target="_blank">GitHub</a>).</td>
 				</tr>
-		
 				<tr>
-					<td>Recognition, Honors & Awards</td>
-					<td>
-						<ul>
-							<li>GSA Top 20 Under 35 Award, University of Memphis, 2024</li>
-							<li>First Prize at 36th Annual Student Research Forum, University of Memphis, 2024</li>
-						</ul>
-					</td>
+					<td class="project-header">COVID-19 Vaccine Sentiment Analysis</td>
+					<td>Built a sentiment analysis model to assess emotions in vaccine-related tweets, analyzing public perception of vaccines (<a href="https://github.com/sameerthereds/Twitter-Sentiment-Analysis-of-Tweets-about-COVID-19-vaccine" target="_blank">GitHub</a>).</td>
 				</tr>
-		
 				<tr>
-					<td>Services & Volunteering</td>
-					<td>
-						<ul>
-							<li>Mentored 2 Ph.D. students and 3 software interns</li>
-							<li>Organizer of the first Nepali Nights at the University of Memphis, 2022</li>
-						</ul>
-					</td>
+					<td class="project-header">Custom NLP Search Engine</td>
+					<td>Developed a custom search engine powered by NLP for University of Memphis students and staff to access campus information efficiently (<a href="https://github.com/sameerthereds/Custom-Search-Engine--NLP-" target="_blank">GitHub</a>).</td>
 				</tr>
-		
 				<tr>
-					<td>Selected Publications</td>
-					<td>
-						<ul>
-							<li>Momentary Stressor Logging and Reflective Visualizations (CHI 2024)</li>
-							<li>Pulse-PPG: An Open-Source Field-Trained PPG Foundation Model (arXiv preprint)</li>
-						</ul>
-					</td>
-				</tr>
-		
-				<tr>
-					<td>Peer Reviews</td>
-					<td>
-						<ul>
-							<li>ACM CHI conference on Human Factors in Computing Systems (2025)</li>
-							<li>Proceedings of the ACM on Interactive, Mobile, Wearable and Ubiquitous Technologies (2020-2024)</li>
-						</ul>
-					</td>
+					<td class="project-header">Rescue Operation Robot</td>
+					<td>Designed and built a Wireless Multi-axis Alive Human Detecting Robot for rescue operations and data acquisition.</td>
 				</tr>
 			</table>
 		</div>
