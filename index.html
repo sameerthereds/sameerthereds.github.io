@@ -24,13 +24,27 @@
 		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
-		<style>
-			body {
-				background-image: url('images/camping/trek4.jpg'); /* Replace with your image path */
-				background-size: cover;
-				opacity: 0.9; /* Prevents repetition */
-			}
-		</style>
+		
+
+<style>
+    body {
+        position: relative;
+    }
+
+    /* Watermark Background Image */
+    body::before {
+        content: "";
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+		background-image: url('images/camping/trek4.jpg'); /* Replace with your image path */
+        background-size: cover;
+        opacity: 0.99; /* Controls transparency (0.1 - more transparent, 1 - fully visible) */
+        z-index: -1; /* Keeps it behind all content */
+    }
+</style>
 
 	</head>
 	<body id="top">
