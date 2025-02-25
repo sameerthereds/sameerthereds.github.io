@@ -36,31 +36,55 @@
 			}
 		
 			table {
-				width: 100%;
-				border-collapse: collapse;
-			}
-		
-			td {
-				padding: 15px 20px; /* Adds padding inside each cell */
-				vertical-align: top;
-			}
-		
-			td:first-child {
-				font-weight: bold;
-				width: 30%;
-				background-color: #f2f2f2; /* Light gray for section headers */
-				border-right: 3px solid #d9d9d9; /* Separator for clarity */
-				padding-left: 25px;
-			}
-		
-			ul {
-				padding-left: 20px; /* Indents bullet points */
-				margin: 5px 0;
-			}
-		
-			li {
-				margin-bottom: 5px; /* Adds spacing between list items */
-			}
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* Table Row Styling */
+tr:nth-child(even) {
+    background-color: #f9f9f9; /* Alternating row colors */
+}
+
+/* Left Column Styling */
+td:first-child {
+    font-weight: bold;
+    font-size: 1.1rem; /* Larger font for section headers */
+    width: 30%;
+    background-color: #e6e6e6; /* Light gray for section headers */
+    border-right: 3px solid #d9d9d9;
+    padding: 20px 25px; /* Extra padding for readability */
+}
+
+/* Right Column Styling */
+td {
+    padding: 20px 25px;
+    vertical-align: top;
+    color: #333; /* Darker text for better contrast */
+}
+
+/* List Items */
+ul {
+    padding-left: 20px;
+    margin: 10px 0;
+}
+
+li {
+    margin-bottom: 10px; /* Increased spacing between list items */
+}
+
+/* Links */
+a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
 
 			
 		</style>
