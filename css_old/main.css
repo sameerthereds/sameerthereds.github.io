@@ -1,0 +1,30 @@
+body {
+   
+    font:white;
+    background-image: url("../assets/river.jpg");
+     background-repeat: no-repeat;
+     background-position: center center;
+     background-attachment: fixed;
+  
+  background-size: cover;
+  background-color: #464646;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+p {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: white;
+}
+
+img {
+    width: 100%;
+    height: auto;
+  }

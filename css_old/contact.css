@@ -1,0 +1,7 @@
+body {
+  font:white;
+    background-image: url("../assets/contact_us.jpg");
+     background-repeat: no-repeat;
+  background-attachment: fixed; 
+  background-size: 100% 100%;
+}
