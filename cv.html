@@ -1,222 +1,284 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSVV9QXYMJ"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-MSVV9QXYMJ');
+    </script>
 
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-MSVV9QXYMJ"></script>
-<script>
-window.dataLayer = window.dataLayer || [];
-function gtag(){dataLayer.push(arguments);}
-gtag('js', new Date());
-gtag('config', 'G-MSVV9QXYMJ');
-</script>
+    <title>Sameer Neupane | CV</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+    <link rel="stylesheet" href="assets/css/main.css" />
+    <!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+    <!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
-<title>Sameer Neupane | CV</title>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        :root {
+            --bg1: #f4f7fb;
+            --bg2: #eef2ff;
+            --card: rgba(255, 255, 255, 0.84);
+            --text: #1f2937;
+            --muted: #5b6472;
+            --primary: #2563eb;
+            --primary-dark: #1d4ed8;
+            --border: rgba(255, 255, 255, 0.45);
+            --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+            --radius: 24px;
+        }
 
-<link rel="stylesheet" href="assets/css/main.css" />
+        html, body {
+            height: 100%;
+        }
 
-<style>
-:root {
-    --bg1:#f4f7fb;
-    --bg2:#eef2ff;
-    --card:rgba(255,255,255,0.9);
-    --text:#1f2937;
-    --muted:#64748b;
-    --primary:#2563eb;
-    --shadow:0 20px 50px rgba(15,23,42,0.12);
-}
+        body {
+            background:
+                radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 30%),
+                radial-gradient(circle at top right, rgba(99, 102, 241, 0.08), transparent 25%),
+                linear-gradient(135deg, var(--bg1), var(--bg2));
+            color: var(--text);
+        }
 
-body {
-    background:
-        radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 30%),
-        radial-gradient(circle at top right, rgba(99,102,241,0.08), transparent 25%),
-        linear-gradient(135deg,var(--bg1),var(--bg2));
-    color:var(--text);
-}
+        /* Same header style as index */
+        #header {
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            background: rgba(255, 255, 255, 0.75);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+        }
 
-/* HEADER SAME AS INDEX */
-#header {
-    backdrop-filter: blur(10px);
-    background: rgba(255,255,255,0.75);
-    border-bottom:1px solid rgba(255,255,255,0.35);
-    box-shadow:0 8px 24px rgba(0,0,0,0.05);
-}
+        #header .logo a,
+        #header .logo span,
+        #header #nav a {
+            color: #1f2937 !important;
+        }
 
-#header .logo a,
-#header .logo span,
-#header #nav a {
-    color:#1f2937 !important;
-}
+        #header #nav a:hover {
+            color: var(--primary) !important;
+        }
 
-#header #nav a:hover {
-    color:var(--primary) !important;
-}
+        .cv-shell {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 7.5rem 1.5rem 3rem 1.5rem;
+        }
 
-/* LAYOUT */
-.container {
-    max-width:1100px;
-    margin:auto;
-    padding:100px 20px 50px;
-}
+        .page-hero {
+            max-width: 1100px;
+            margin: 0 auto 1.5rem auto;
+            padding: 2rem 2rem 1.75rem 2rem;
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: var(--radius);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            box-shadow: var(--shadow);
+            position: relative;
+            overflow: hidden;
+        }
 
-/* HERO */
-.hero {
-    background:var(--card);
-    padding:30px;
-    border-radius:20px;
-    box-shadow:var(--shadow);
-    margin-bottom:30px;
-}
+        .page-hero::before {
+            content: "";
+            position: absolute;
+            width: 240px;
+            height: 240px;
+            border-radius: 50%;
+            right: -80px;
+            top: -80px;
+            background: rgba(37, 99, 235, 0.10);
+            filter: blur(8px);
+        }
 
-.hero h1 {
-    font-size:2.6rem;
-    margin-bottom:10px;
-}
+        .page-badge {
+            display: inline-block;
+            margin-bottom: 0.8rem;
+            padding: 0.45rem 0.9rem;
+            border-radius: 999px;
+            background: rgba(37, 99, 235, 0.10);
+            color: var(--primary-dark);
+            font-weight: 600;
+            font-size: 0.9rem;
+            letter-spacing: 0.02em;
+        }
 
-.hero p {
-    color:var(--muted);
-}
+        .page-hero h1 {
+            margin: 0 0 0.6rem 0;
+            font-size: 2.5rem;
+            line-height: 1.1;
+            color: #0f172a;
+        }
 
-/* SECTION */
-.section {
-    margin-bottom:30px;
-}
+        .page-hero p {
+            margin: 0;
+            font-size: 1.02rem;
+            line-height: 1.8;
+            color: var(--muted);
+        }
 
-.section h2 {
-    font-size:1.5rem;
-    margin-bottom:15px;
-    border-left:4px solid var(--primary);
-    padding-left:10px;
-}
+        .cv-actions {
+            max-width: 1100px;
+            margin: 0 auto 1.25rem auto;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
 
-/* CARD */
-.card {
-    background:var(--card);
-    padding:20px;
-    border-radius:16px;
-    box-shadow:0 10px 30px rgba(0,0,0,0.05);
-}
+        .cv-actions a {
+            display: inline-block;
+            padding: 0.85rem 1.2rem;
+            border-radius: 999px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.25s ease, box-shadow 0.25s ease, opacity 0.25s ease;
+        }
 
-/* LIST */
-ul {
-    padding-left:20px;
-}
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary), #4f46e5);
+            color: white !important;
+            box-shadow: 0 12px 24px rgba(37, 99, 235, 0.22);
+        }
 
-li {
-    margin-bottom:8px;
-    line-height:1.6;
-}
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.88);
+            color: var(--text) !important;
+            border: 1px solid rgba(15, 23, 42, 0.08);
+            box-shadow: 0 10px 24px rgba(15, 23, 42, 0.06);
+        }
 
-a {
-    color:var(--primary);
-    text-decoration:none;
-    font-weight:500;
-}
+        .cv-actions a:hover {
+            transform: translateY(-2px);
+            opacity: 0.96;
+        }
 
-a:hover {
-    text-decoration:underline;
-}
-</style>
+        .pdf-card {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.88);
+            border: 1px solid rgba(255, 255, 255, 0.55);
+            border-radius: 22px;
+            box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+            overflow: hidden;
+            min-height: 78vh;
+        }
 
+        .pdf-frame {
+            width: 100%;
+            height: 78vh;
+            border: none;
+            display: block;
+            background: white;
+        }
+
+        .fallback {
+            padding: 2rem;
+            text-align: center;
+            color: var(--muted);
+            line-height: 1.8;
+        }
+
+        .fallback a {
+            color: var(--primary);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        .fallback a:hover {
+            text-decoration: underline;
+        }
+
+        @media screen and (max-width: 640px) {
+            .cv-shell {
+                padding-top: 6.5rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
+            }
+
+            .page-hero {
+                padding: 1.6rem 1.2rem;
+            }
+
+            .page-hero h1 {
+                font-size: 2rem;
+            }
+
+            .pdf-frame {
+                height: 72vh;
+            }
+        }
+    </style>
 </head>
 
-<body>
+<body id="top">
 
-<header id="header">
-    <div class="logo">
-        <a href="index.html">Sameer Neupane</a>
-        <span>
-            The <a href="https://techlab.ucsf.edu/" target="_blank">UCSF TECH Lab</a>
-            at <a href="https://www.ucsf.edu/" target="_blank">UCSF</a>
-        </span>
-    </div>
+    <header id="header">
+        <div class="logo">
+            <a href="index.html">Sameer Neupane</a>
+            <span>
+                The <a href="https://techlab.ucsf.edu/" target="_blank">UCSF TECH Lab</a>
+                at <a href="https://www.ucsf.edu/" target="_blank">University of California, San Francisco</a>
+            </span>
+        </div>
 
-    <nav id="nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="activities.html">Research Activities</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="hobby.html">Hobby</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="Publications.html">Publications</a></li>
-        </ul>
-    </nav>
-</header>
+        <nav id="nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activities.html">Research Activities</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="hobby.html">Hobby</a></li>
+                <li><a href="cv.html">CV</a></li>
+                <li><a href="Publications.html">Publications</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<div class="container">
+    <main class="cv-shell">
+        <section class="page-hero">
+            <span class="page-badge">Curriculum Vitae</span>
+            <h1>CV</h1>
+            <p>
+                You can view my current curriculum vitae directly below or open it in a separate tab for download and printing.
+            </p>
+        </section>
 
-<div class="hero">
-    <h1>Curriculum Vitae</h1>
-    <p>Postdoctoral Scholar · AI, Wearables, Mental Health</p>
-</div>
+        <div class="cv-actions">
+            <a class="btn-primary" href="files/Sameer_Neupane_CV.pdf" target="_blank">Open PDF in New Tab</a>
+            <a class="btn-secondary" href="files/Sameer_Neupane_CV.pdf" download>Download CV</a>
+        </div>
 
-<div class="section">
-    <h2>Research Interests</h2>
-    <div class="card">
-        Mobile Health, Wearables, HCI, Machine Learning, LLMs, Data Visualization
-    </div>
-</div>
+        <section class="pdf-card">
+            <object
+                data="files/Sameer_Neupane_CV.pdf"
+                type="application/pdf"
+                width="100%"
+                height="100%">
+                <iframe
+                    class="pdf-frame"
+                    src="files/Sameer_Neupane_CV.pdf">
+                </iframe>
+                <div class="fallback">
+                    Your browser could not display the PDF inline.
+                    <br>
+                    <a href="files/Sameer_neupane_resume.pdf" target="_blank">Open the CV PDF here</a>.
+                </div>
+            </object>
+        </section>
+    </main>
 
-<div class="section">
-    <h2>Education</h2>
-    <div class="card">
-        <ul>
-            <li><b>PhD, Computer Science</b> — University of Memphis (2018–2025)</li>
-            <li><b>MS, Computer Science</b> — University of Memphis</li>
-            <li><b>B.Tech, ECE</b> — JNTUA (2010–2014)</li>
-        </ul>
-    </div>
-</div>
-
-<div class="section">
-    <h2>Experience</h2>
-    <div class="card">
-        <ul>
-            <li><b>UCSF — Postdoctoral Scholar (2026–Present)</b></li>
-            <li><b>University of Memphis — Research Assistant (2018–2025)</b></li>
-            <li><b>OpenText — Senior Software Engineer (2014–2018)</b></li>
-        </ul>
-    </div>
-</div>
-
-<div class="section">
-    <h2>Selected Projects</h2>
-    <div class="card">
-        <ul>
-            <li>RELIEF Study — Wearable + LLM stress interventions</li>
-            <li>MOODS Study — 100-day field study</li>
-            <li>Personal Informatics System (16 visualizations)</li>
-            <li>NER for Nepali using LLMs</li>
-        </ul>
-    </div>
-</div>
-
-<div class="section">
-    <h2>Skills</h2>
-    <div class="card">
-        <ul>
-            <li>Python, Java, SQL, R, PyTorch, TensorFlow</li>
-            <li>Machine Learning, Deep Learning, NLP, Time Series</li>
-        </ul>
-    </div>
-</div>
-
-<div class="section">
-    <h2>Awards</h2>
-    <div class="card">
-        <ul>
-            <li>Top 20 Under 35 — University of Memphis</li>
-            <li>RISE Doctoral Fellow</li>
-            <li>First Prize — Research Forum</li>
-        </ul>
-    </div>
-</div>
-
-</div>
-
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/main.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/jquery.dropotron.min.js"></script>
+    <script src="assets/js/jquery.scrollex.min.js"></script>
+    <script src="assets/js/jquery.scrolly.min.js"></script>
+    <script src="assets/js/jquery.selectorr.min.js"></script>
+    <script src="assets/js/skel.min.js"></script>
+    <script src="assets/js/util.js"></script>
+    <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+    <script src="assets/js/main.js"></script>
 
 </body>
 </html>
