@@ -46,6 +46,253 @@
         /* z-index: -1; Keeps it behind all content */
     }
 </style> -->
+<style>
+    :root {
+        --bg1: #f4f7fb;
+        --bg2: #eef2ff;
+        --card: rgba(255, 255, 255, 0.78);
+        --text: #1f2937;
+        --muted: #5b6472;
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+        --radius: 24px;
+    }
+
+    body {
+        background:
+            radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 30%),
+            radial-gradient(circle at top right, rgba(99, 102, 241, 0.08), transparent 25%),
+            linear-gradient(135deg, var(--bg1), var(--bg2));
+        color: var(--text);
+    }
+
+    #header {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.75);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
+    #header .logo a,
+    #header .logo span,
+    #header #nav a {
+        color: #1f2937 !important;
+    }
+
+    #header #nav a:hover {
+        color: var(--primary) !important;
+    }
+
+    .hero-card {
+        max-width: 1180px;
+        margin: 120px auto 70px auto;
+        padding: 50px;
+        display: grid;
+        grid-template-columns: 320px 1fr;
+        gap: 40px;
+        align-items: center;
+        background: var(--card);
+        border: 1px solid rgba(255,255,255,0.45);
+        backdrop-filter: blur(14px);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hero-card::before {
+        content: "";
+        position: absolute;
+        width: 220px;
+        height: 220px;
+        background: rgba(37, 99, 235, 0.08);
+        border-radius: 50%;
+        top: -60px;
+        right: -60px;
+        filter: blur(10px);
+    }
+
+    .profile-column {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 22px;
+    }
+
+    .profile-image-wrap {
+        position: relative;
+        display: inline-block;
+        animation: floatImage 4s ease-in-out infinite;
+    }
+
+    .profile-image-wrap::before {
+        content: "";
+        position: absolute;
+        inset: -10px;
+        border-radius: 28px;
+        background: linear-gradient(135deg, rgba(37,99,235,0.30), rgba(99,102,241,0.18));
+        z-index: 0;
+        filter: blur(10px);
+        animation: pulseGlow 3s ease-in-out infinite;
+    }
+
+    .profile-image {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        max-width: 270px;
+        border-radius: 24px;
+        display: block;
+        box-shadow: 0 18px 40px rgba(0,0,0,0.16);
+        transition: transform 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .profile-image:hover {
+        transform: scale(1.03) rotate(-1deg);
+        box-shadow: 0 24px 48px rgba(0,0,0,0.2);
+    }
+
+    .social-links {
+        display: flex;
+        gap: 14px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .social-links a {
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.35rem;
+        background: rgba(255,255,255,0.88);
+        color: var(--text);
+        text-decoration: none;
+        box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+        transition: all 0.28s ease;
+    }
+
+    .social-links a:hover {
+        transform: translateY(-6px) scale(1.06);
+        color: white;
+        background: linear-gradient(135deg, var(--primary), #6366f1);
+    }
+
+    .hero-text {
+        text-align: left;
+        position: relative;
+        z-index: 1;
+    }
+
+    .hero-badge {
+        display: inline-block;
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(37,99,235,0.10);
+        color: var(--primary-dark);
+        font-weight: 600;
+        font-size: 0.9rem;
+        margin-bottom: 16px;
+    }
+
+    .hero-text h1 {
+        font-size: 3rem;
+        line-height: 1.1;
+        margin-bottom: 14px;
+        color: #0f172a;
+    }
+
+    .hero-text p {
+        font-size: 1.08rem;
+        line-height: 1.9;
+        color: var(--muted);
+        margin-bottom: 18px;
+        text-align: justify;
+    }
+
+    .hero-text strong {
+        color: #111827;
+    }
+
+    .hero-text a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 600;
+        transition: color 0.25s ease;
+    }
+
+    .hero-text a:hover {
+        color: var(--primary-dark);
+        text-decoration: underline;
+    }
+
+    .quick-tags {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        margin: 18px 0 24px 0;
+    }
+
+    .quick-tags span {
+        padding: 8px 14px;
+        border-radius: 999px;
+        background: rgba(255,255,255,0.85);
+        border: 1px solid rgba(0,0,0,0.05);
+        font-size: 0.92rem;
+        color: #334155;
+        box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+    }
+
+    @keyframes floatImage {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+    }
+
+    @keyframes pulseGlow {
+        0%, 100% { opacity: 0.7; transform: scale(1); }
+        50% { opacity: 1; transform: scale(1.03); }
+    }
+
+    @media screen and (max-width: 980px) {
+        .hero-card {
+            grid-template-columns: 1fr;
+            text-align: center;
+            padding: 35px 24px;
+            margin: 100px 18px 50px 18px;
+        }
+
+        .hero-text {
+            text-align: center;
+        }
+
+        .hero-text p {
+            text-align: left;
+        }
+
+        .hero-text h1 {
+            font-size: 2.3rem;
+        }
+    }
+
+    @media screen and (max-width: 640px) {
+        .hero-text h1 {
+            font-size: 2rem;
+        }
+
+        .profile-image {
+            max-width: 220px;
+        }
+
+        .social-links a {
+            width: 46px;
+            height: 46px;
+            font-size: 1.1rem;
+        }
+    }
+</style>
 
 	</head>
 	<body id="top">
@@ -54,9 +301,13 @@
     <header id="header" >
 
       <!-- Logo -->
-        <div class="logo">
-          <a href="index.html">Sameer Neupane</a><span> The <a href=""https://techlab.ucsf.edu/" target="_blank">UCSF TECH Lab</a> at <a href="https://techlab.ucsf.edu/" target="_blank">The University of California San Francisco</a> </span>
-        </div>
+	  <div class="logo">
+		<a href="index.html">Sameer Neupane</a>
+		<span>
+			The <a href="https://techlab.ucsf.edu/" target="_blank">UCSF TECH Lab</a>
+			at <a href="https://www.ucsf.edu/" target="_blank">University of California, San Francisco</a>
+		</span>
+	</div>
 
 
       <!-- Nav -->
@@ -78,76 +329,85 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/js/all.min.js" crossorigin="anonymous"></script>
 
     <!-- About Me Section -->
-	<section id="about" style="max-width: 1100px; margin: 80px auto; padding: 40px; display: flex; flex-direction: column; align-items: center; background-color: #ffffff; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); text-align: center;">
-    
-		<!-- Image & Social Links Side by Side -->
-		<div style="display: flex; align-items: center; gap: 20px;">
-			<!-- Image -->
-			<img src="images/chi_pic.jpeg" alt="Sameer Neupane" style="width: 100%; max-width: 250px; border-radius: 10px; box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);">
-			
-			<!-- Social Icons -->
-			<div style="display: flex; flex-direction: column; gap: 15px;">
-				<a href="https://www.linkedin.com/in/sameer-n-9a86139b/" target="_blank" style="font-size: 2.5rem; color: #0077b5; text-decoration: none;">
-					<i class="fab fa-linkedin"></i>
+	<section id="about" class="hero-card">
+
+		<div class="profile-column">
+			<div class="profile-image-wrap">
+				<img src="images/chi_pic.jpeg" alt="Sameer Neupane" class="profile-image">
+			</div>
+	
+			<div class="social-links">
+				<a href="https://www.linkedin.com/in/sameer-n-9a86139b/" target="_blank" aria-label="LinkedIn">
+					<i class="fab fa-linkedin-in"></i>
 				</a>
-				<a href="https://github.com/sameerthereds" target="_blank" style="font-size: 2.5rem; color: #333; text-decoration: none;">
+				<a href="https://github.com/sameerthereds" target="_blank" aria-label="GitHub">
 					<i class="fab fa-github"></i>
 				</a>
-				<a href="https://scholar.google.com/citations?user=9Vy0GsIAAAAJ&hl=en" target="_blank" style="font-size: 2.5rem; color: #4285F4; text-decoration: none;">
+				<a href="https://scholar.google.com/citations?user=9Vy0GsIAAAAJ&hl=en" target="_blank" aria-label="Google Scholar">
 					<i class="fas fa-graduation-cap"></i>
 				</a>
-				<a href="mailto:sameerthereds@gmail.com" style="font-size: 2.5rem; color: #c71610; text-decoration: none;">
+				<a href="mailto:sameerthereds@gmail.com" aria-label="Email">
 					<i class="fas fa-envelope"></i>
 				</a>
 			</div>
 		</div>
 	
-		<!-- Text Below Image & Social Links -->
-		<div style="max-width: 1000px; margin-top: 10px; text-align: justify; font-family: Arial, sans-serif; line-height: 1.8; color: #333;">
-			<h1 style="font-size: 2.5rem; color: #2c3e50; text-align: center;">Hi, I'm Sameer Neupane</h1>
-		
-			<p style="font-size: 1.2rem;">
-				I am a <strong>Postdoctoral Scholar in Computer Science at the University of California, San Francisco (UCSF)</strong>, 
-				conducting research at the 
-				<strong><a href="https://techlab.ucsf.edu/" target="_blank" style="color: #007bff;">UCSF TECH Lab</a></strong> 
-				under the mentorship of 
-				<strong><a href="https://www.peterwashington.net/" target="_blank" style="color: #007bff;">Dr. Peter Washington</a></strong>. 
-				My work focuses on <strong>Mobile Health, Wearables, Human-Computer Interaction, and AI-driven mental health interventions</strong>. 
-				I develop multimodal AI systems that integrate <strong>wearable biosignals and behavioral data</strong> to enable 
-				<strong>real-time detection and personalized interventions</strong> for mental health conditions such as stress, anxiety, and depression, 
+		<div class="hero-text">
+			<span class="hero-badge">Postdoctoral Scholar · UCSF TECH Lab</span>
+			<h1>Hi, I'm Sameer Neupane</h1>
+	
+			<div class="quick-tags">
+				<span>Mobile Health</span>
+				<span>Wearables</span>
+				<span>Human-Computer Interaction</span>
+				<span>AI for Mental Health</span>
+				<span>LLMs</span>
+			</div>
+	
+			<p>
+				I am a <strong>Postdoctoral Scholar in Computer Science at the University of California, San Francisco (UCSF)</strong>,
+				conducting research at the
+				<strong><a href="https://techlab.ucsf.edu/" target="_blank">UCSF TECH Lab</a></strong>
+				under the mentorship of
+				<strong><a href="https://www.peterwashington.net/" target="_blank">Dr. Peter Washington</a></strong>.
+				My work focuses on <strong>mobile health, wearables, human-computer interaction, and AI-driven mental health interventions</strong>.
+				I develop multimodal AI systems that integrate <strong>wearable biosignals and behavioral data</strong> to enable
+				<strong>real-time detection and personalized interventions</strong> for mental health conditions such as stress, anxiety, and depression,
 				with a particular focus on integrating <strong>large language models (LLMs) with wearable technology</strong>.
 			</p>
-			
-			<p style="font-size: 1.2rem;">
-				Previously, I completed my Ph.D. in Computer Science at the University of Memphis, 
-				where I conducted research under the mentorship of 
-				<strong><a href="https://mdotcenter.org/santosh/" target="_blank" style="color: #007bff;">Dr. Santosh Kumar</a></strong> 
-				at the <a href="https://mdotcenter.org/" target="_blank" style="color: #007bff;">mDOT Center</a>, 
+	
+			<p>
+				Previously, I completed my Ph.D. in Computer Science at the University of Memphis,
+				where I conducted research under the mentorship of
+				<strong><a href="https://mdotcenter.org/santosh/" target="_blank">Dr. Santosh Kumar</a></strong>
+				at the <a href="https://mdotcenter.org/" target="_blank">mDOT Center</a>,
 				focusing on wearable-based stress sensing and AI-driven intervention systems.
-				I have led studies such as the 
-				<a href="https://reliefstudy.mdotcenter.org" target="_blank" style="color: #007bff;">RELIEF Study</a>, 
-				which evaluates the effectiveness of <strong>wearable-integrated LLM chatbots for stress management</strong>, and the 
-				<a href="https://moods.md2k.org/" target="_blank" style="color: #007bff;">MOODS Study</a>, 
-				which demonstrated how AI-driven momentary stressors and reflective visualizations can <strong>reduce stress and promote behavior change</strong>. 
-				My expertise spans <strong>machine learning, deep learning, NLP, and data visualization</strong>, 
+				I have led studies such as the
+				<a href="https://reliefstudy.mdotcenter.org" target="_blank">RELIEF Study</a>,
+				which evaluates the effectiveness of <strong>wearable-integrated LLM chatbots for stress management</strong>, and the
+				<a href="https://moods.md2k.org/" target="_blank">MOODS Study</a>,
+				which demonstrated how AI-driven momentary stressors and reflective visualizations can
+				<strong>reduce stress and promote behavior change</strong>.
+				My expertise spans <strong>machine learning, deep learning, NLP, and data visualization</strong>,
 				with a focus on designing <strong>intelligent, user-centric health technologies</strong>.
 			</p>
-		
-			<p style="font-size: 1.2rem;">
-				Previously, I worked as a <strong>Senior Software Engineer at OpenText</strong>, where I contributed to 
-				<strong>enterprise-level medical records software</strong>, developing scalable solutions for 
-				<strong>healthcare data processing</strong>. My academic journey has been fueled by my passion for 
-				<strong>AI-driven health innovations</strong>, inspired by my roots in <strong>rural Nepal</strong>, 
-				where mental health remains a stigma. Overcoming personal and financial challenges, I am committed to 
-				<strong>advancing AI for mental health</strong> and making stress management <strong>more accessible, adaptive, and impactful</strong>.
+	
+			<p>
+				Previously, I worked as a <strong>Senior Software Engineer at OpenText</strong>, where I contributed to
+				<strong>enterprise-level medical records software</strong>, developing scalable solutions for
+				<strong>healthcare data processing</strong>. My academic journey has been shaped by a strong commitment to
+				<strong>AI-driven health innovation</strong>, inspired by my roots in <strong>rural Nepal</strong>,
+				where mental health remains highly stigmatized. I am committed to advancing AI for mental health and making
+				stress management <strong>more accessible, adaptive, and impactful</strong>.
 			</p>
-		
-			<p style="font-size: 1.2rem;">
-				Beyond research, I enjoy <strong>sports, hiking, camping, and watching documentaries</strong>. 
-				I am also actively involved in <strong>mentorship and community engagement</strong>, 
-				having organized <strong>science exhibitions and cultural events</strong> to inspire the next generation of researchers.
+	
+			<p>
+				Beyond research, I enjoy <strong>sports, hiking, camping, and watching documentaries</strong>.
+				I am also actively involved in <strong>mentorship and community engagement</strong>,
+				including organizing <strong>science exhibitions and cultural events</strong> to inspire the next generation of researchers.
 			</p>
 		</div>
+	
 	</section>
   
 	  <!-- FontAwesome for Icons -->
