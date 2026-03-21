@@ -26,72 +26,109 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
         <style>
-            /* General Page Styling */
             body {
-                font-family: Arial, sans-serif;
-                background-color: #f4f4f4;
+                font-family: 'Inter', Arial, sans-serif;
+                background: linear-gradient(135deg, #eef2ff, #f8fafc);
                 margin: 0;
                 padding: 0;
             }
-    
-            /* Project Section Container */
+        
             .projects-container {
-                max-width: 1100px;
-                margin: 50px auto;
+                max-width: 1000px;
+                margin: 80px auto;
                 padding: 20px;
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
+                position: relative;
             }
-    
-            /* Individual Project Card */
+        
+            /* Timeline vertical line */
+            .projects-container::before {
+                content: "";
+                position: absolute;
+                left: 20px;
+                top: 0;
+                bottom: 0;
+                width: 3px;
+                background: linear-gradient(to bottom, #2563eb, #6366f1);
+                border-radius: 2px;
+            }
+        
             .project-card {
-                background: white;
-                border-radius: 10px;
-                box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-                width: 100%;
-                max-width: 800px;
-                margin: 20px;
-                padding: 20px;
-                text-align: left;
-                transition: transform 0.3s ease-in-out;
+                background: rgba(255, 255, 255, 0.85);
+                backdrop-filter: blur(10px);
+                border-radius: 16px;
+                box-shadow: 0 15px 40px rgba(0, 0, 0, 0.08);
+                margin: 30px 0 30px 60px;
+                padding: 25px 30px;
+                position: relative;
+                transition: all 0.3s ease;
+                opacity: 0;
+                transform: translateY(30px);
+                animation: fadeUp 0.8s ease forwards;
             }
-    
-            /* Hover Effect */
+        
+            /* Stagger animation */
+            .project-card:nth-child(1) { animation-delay: 0.1s; }
+            .project-card:nth-child(2) { animation-delay: 0.2s; }
+            .project-card:nth-child(3) { animation-delay: 0.3s; }
+            .project-card:nth-child(4) { animation-delay: 0.4s; }
+        
             .project-card:hover {
-                transform: translateY(-5px);
+                transform: translateY(-8px) scale(1.01);
+                box-shadow: 0 20px 50px rgba(0, 0, 0, 0.12);
             }
-    
-            /* Project Header */
+        
+            /* Timeline dot */
+            .project-card::before {
+                content: "";
+                position: absolute;
+                left: -48px;
+                top: 28px;
+                width: 14px;
+                height: 14px;
+                background: linear-gradient(135deg, #2563eb, #6366f1);
+                border-radius: 50%;
+                box-shadow: 0 0 0 6px rgba(99, 102, 241, 0.15);
+            }
+        
             .project-header {
-                font-size: 1.4rem;
-                font-weight: bold;
-                color: #2c3e50;
+                font-size: 1.3rem;
+                font-weight: 700;
+                color: #1e293b;
                 margin-bottom: 10px;
             }
-    
-            /* Project Description */
-            .project-description {
-                font-size: 1rem;
-                color: #555;
-                line-height: 1.6;
+        
+            .project-description ul {
+                padding-left: 18px;
+                margin: 0;
             }
-    
-            /* Project Links */
-            .project-links {
-                margin-top: 15px;
+        
+            .project-description li {
+                font-size: 1.05rem;
+                color: #475569;
+                line-height: 1.7;
+                margin-bottom: 8px;
             }
-    
-            .project-links a {
-                color: #007bff;
-                text-decoration: none;
-                font-weight: bold;
-                margin-right: 15px;
-                display: inline-block;
+        
+            @keyframes fadeUp {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
             }
-    
-            .project-links a:hover {
-                text-decoration: underline;
+        
+            /* Mobile */
+            @media screen and (max-width: 768px) {
+                .projects-container::before {
+                    left: 10px;
+                }
+        
+                .project-card {
+                    margin-left: 40px;
+                }
+        
+                .project-card::before {
+                    left: -38px;
+                }
             }
         </style>
         
