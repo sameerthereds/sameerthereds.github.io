@@ -26,6 +26,42 @@
 		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
 
         <style>
+            :root {
+        --bg1: #f4f7fb;
+        --bg2: #eef2ff;
+        --card: rgba(255, 255, 255, 0.78);
+        --text: #1f2937;
+        --muted: #5b6472;
+        --primary: #2563eb;
+        --primary-dark: #1d4ed8;
+        --shadow: 0 20px 50px rgba(15, 23, 42, 0.12);
+        --radius: 24px;
+    }
+
+    body {
+        background:
+            radial-gradient(circle at top left, rgba(37, 99, 235, 0.08), transparent 30%),
+            radial-gradient(circle at top right, rgba(99, 102, 241, 0.08), transparent 25%),
+            linear-gradient(135deg, var(--bg1), var(--bg2));
+        color: var(--text);
+    }
+
+    #header {
+        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.75);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.35);
+        box-shadow: 0 8px 24px rgba(0,0,0,0.05);
+    }
+
+    #header .logo a,
+    #header .logo span,
+    #header #nav a {
+        color: #1f2937 !important;
+    }
+
+    #header #nav a:hover {
+        color: var(--primary) !important;
+    }
             body {
                 font-family: 'Inter', Arial, sans-serif;
                 background: linear-gradient(135deg, #eef2ff, #f8fafc);
@@ -136,7 +172,7 @@
 	<body id="top">
 
 		<!-- Header -->
-        <header id="header" class="alt" >
+        <header id="header"  >
 
             <!-- Logo -->
             <div class="logo">
