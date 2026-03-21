@@ -22,10 +22,8 @@ gtag('config', 'G-MSVV9QXYMJ');
     --bg2:#eef2ff;
     --card:rgba(255,255,255,0.85);
     --text:#1f2937;
-    --muted:#5b6472;
+    --muted:#64748b;
     --primary:#2563eb;
-    --shadow:0 20px 50px rgba(15,23,42,0.12);
-    --radius:20px;
 }
 
 body {
@@ -33,10 +31,9 @@ body {
         radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 30%),
         radial-gradient(circle at top right, rgba(99,102,241,0.08), transparent 25%),
         linear-gradient(135deg,var(--bg1),var(--bg2));
-    color:var(--text);
 }
 
-/* HEADER — SAME AS INDEX */
+/* HEADER SAME AS INDEX */
 #header {
     backdrop-filter: blur(10px);
     background: rgba(255,255,255,0.75);
@@ -54,87 +51,59 @@ body {
     color:var(--primary) !important;
 }
 
-/* PAGE LAYOUT */
+/* LAYOUT */
 .container {
-    max-width:1100px;
-    margin:0 auto;
-    padding:100px 20px 40px;
+    max-width:1000px;
+    margin:auto;
+    padding:100px 20px;
 }
 
 /* HERO */
 .hero {
     background:var(--card);
-    padding:30px;
-    border-radius:var(--radius);
-    box-shadow:var(--shadow);
-    margin-bottom:30px;
+    padding:25px;
+    border-radius:16px;
+    margin-bottom:25px;
 }
 
 .hero h1 {
-    font-size:2.6rem;
-    margin-bottom:10px;
+    font-size:2.5rem;
 }
 
-.hero p {
-    color:var(--muted);
-}
-
-/* PUBLICATION CARD */
+/* PUBLICATION */
 .pub-card {
-    background:var(--card);
-    padding:25px;
-    border-radius:var(--radius);
-    box-shadow:0 15px 40px rgba(0,0,0,0.08);
-    margin-bottom:25px;
+    background:white;
+    padding:22px;
+    border-radius:16px;
+    margin-bottom:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.06);
     transition:0.3s;
-    opacity:0;
-    transform:translateY(20px);
-    animation:fadeUp 0.6s forwards;
 }
-
-.pub-card:nth-child(1){animation-delay:0.1s;}
-.pub-card:nth-child(2){animation-delay:0.2s;}
-.pub-card:nth-child(3){animation-delay:0.3s;}
-.pub-card:nth-child(4){animation-delay:0.4s;}
 
 .pub-card:hover {
-    transform:translateY(-6px);
-    box-shadow:0 20px 50px rgba(0,0,0,0.12);
+    transform:translateY(-5px);
 }
 
 .pub-title {
-    font-size:1.35rem;
     font-weight:700;
+    font-size:1.2rem;
     margin-bottom:8px;
 }
 
 .pub-venue {
-    color:#64748b;
     font-style:italic;
-    margin-bottom:15px;
+    color:#64748b;
+    margin-bottom:12px;
 }
 
 .pub-links a {
-    display:inline-block;
-    background:linear-gradient(135deg,#2563eb,#4f46e5);
+    background:#2563eb;
     color:white;
-    padding:8px 16px;
+    padding:6px 14px;
     border-radius:999px;
     text-decoration:none;
     font-size:0.9rem;
     margin-right:10px;
-}
-
-.pub-links a:hover {
-    opacity:0.9;
-}
-
-/* ANIMATION */
-@keyframes fadeUp {
-    to {
-        opacity:1;
-        transform:translateY(0);
-    }
 }
 </style>
 
@@ -142,103 +111,112 @@ body {
 
 <body>
 
-<!-- HEADER -->
 <header id="header">
-    <div class="logo">
-        <a href="index.html">Sameer Neupane</a>
-        <span>
-            The <a href="https://techlab.ucsf.edu/" target="_blank">UCSF TECH Lab</a>
-            at <a href="https://www.ucsf.edu/" target="_blank">UCSF</a>
-        </span>
-    </div>
+<div class="logo">
+<a href="index.html">Sameer Neupane</a>
+<span>
+The <a href="https://techlab.ucsf.edu/" target="_blank">UCSF TECH Lab</a>
+at <a href="https://www.ucsf.edu/" target="_blank">UCSF</a>
+</span>
+</div>
 
-    <nav id="nav">
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="activities.html">Research Activities</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="hobby.html">Hobby</a></li>
-            <li><a href="cv.html">CV</a></li>
-            <li><a href="Publications.html">Publications</a></li>
-        </ul>
-    </nav>
+<nav id="nav">
+<ul>
+<li><a href="index.html">Home</a></li>
+<li><a href="activities.html">Research Activities</a></li>
+<li><a href="projects.html">Projects</a></li>
+<li><a href="hobby.html">Hobby</a></li>
+<li><a href="cv.html">CV</a></li>
+<li><a href="Publications.html">Publications</a></li>
+</ul>
+</nav>
 </header>
 
 <div class="container">
 
-    <!-- HERO -->
-    <div class="hero">
-        <h1>Publications</h1>
-        <p>Selected publications in wearable sensing, AI, and digital mental health.</p>
-    </div>
+<div class="hero">
+<h1>Publications</h1>
+<p>Selected publications in wearable sensing, AI, and digital mental health.</p>
+</div>
 
-    <!-- PUBLICATIONS -->
+<!-- Publications -->
 
-    <div class="pub-card">
-        <div class="pub-title">
-            How Many Times Do People Usually Experience Different Kinds of Stressors Each Day?
-        </div>
-        <div class="pub-venue">UbiComp Companion 2025</div>
-        <div class="pub-links">
-            <a href="https://arxiv.org/abs/2508.01553" target="_blank">Arxiv</a>
-        </div>
-    </div>
+<div class="pub-card">
+<div class="pub-title">
+How Many Times Do People Usually Experience Different Kinds of Stressors Each Day?
+</div>
+<div class="pub-venue">
+UbiComp Companion '25
+</div>
+<div class="pub-links">
+<a href="https://arxiv.org/abs/2508.01553" target="_blank">Arxiv</a>
+</div>
+</div>
 
-    <div class="pub-card">
-        <div class="pub-title">
-            Wearable Meets LLM for Stress Management
-        </div>
-        <div class="pub-venue">CHI EA 2025</div>
-        <div class="pub-links">
-            <a href="https://dl.acm.org/doi/abs/10.1145/3706599.3720197" target="_blank">Paper</a>
-        </div>
-    </div>
+<div class="pub-card">
+<div class="pub-title">
+Wearable Meets LLM for Stress Management: A Duoethnographic Study Integrating Wearable-Triggered Stressors and LLM Chatbots for Personalized Interventions
+</div>
+<div class="pub-venue">
+CHI EA 2025
+</div>
+<div class="pub-links">
+<a href="https://dl.acm.org/doi/abs/10.1145/3706599.3720197" target="_blank">Paper</a>
+</div>
+</div>
 
-    <div class="pub-card">
-        <div class="pub-title">
-            Momentary Stressor Logging and Reflective Visualizations
-        </div>
-        <div class="pub-venue">CHI 2024</div>
-        <div class="pub-links">
-            <a href="https://dl.acm.org/doi/10.1145/3613904.3642662" target="_blank">Paper</a>
-            <a href="https://www.youtube.com/watch?v=PGwZs8tZFaY" target="_blank">Video</a>
-        </div>
-    </div>
+<div class="pub-card">
+<div class="pub-title">
+Momentary Stressor Logging and Reflective Visualizations: Implications for Stress Management with Wearables
+</div>
+<div class="pub-venue">
+CHI 2024
+</div>
+<div class="pub-links">
+<a href="https://dl.acm.org/doi/10.1145/3613904.3642662" target="_blank">Paper</a>
+<a href="https://www.youtube.com/watch?v=PGwZs8tZFaY" target="_blank">Video</a>
+</div>
+</div>
 
-    <div class="pub-card">
-        <div class="pub-title">
-            Pulse-PPG: A Field-Trained PPG Foundation Model
-        </div>
-        <div class="pub-venue">IMWUT</div>
-        <div class="pub-links">
-            <a href="https://arxiv.org/pdf/2502.01108" target="_blank">Arxiv</a>
-        </div>
-    </div>
+<div class="pub-card">
+<div class="pub-title">
+Pulse-PPG: An Open-Source Field-Trained PPG Foundation Model for Wearable Applications Across Lab and Field Settings
+</div>
+<div class="pub-venue">
+IMWUT
+</div>
+<div class="pub-links">
+<a href="https://arxiv.org/pdf/2502.01108" target="_blank">Arxiv</a>
+</div>
+</div>
 
-    <div class="pub-card">
-        <div class="pub-title">
-            Generative AI for NER in Nepali
-        </div>
-        <div class="pub-venue">FLAIRS 2025</div>
-        <div class="pub-links">
-            <a href="https://arxiv.org/abs/2503.09822" target="_blank">Paper</a>
-        </div>
-    </div>
+<div class="pub-card">
+<div class="pub-title">
+Generative AI for Named Entity Recognition in Low-Resource Language Nepali
+</div>
+<div class="pub-venue">
+FLAIRS 2025
+</div>
+<div class="pub-links">
+<a href="https://arxiv.org/abs/2503.09822" target="_blank">Paper</a>
+</div>
+</div>
 
-    <div class="pub-card">
-        <div class="pub-title">
-            Sleep Disruption and Pain in Sickle Cell Disease
-        </div>
-        <div class="pub-venue">Journal of Pain</div>
-        <div class="pub-links">
-            <a href="https://www.sciencedirect.com/science/article/abs/pii/S1526590024003523" target="_blank">Paper</a>
-        </div>
-    </div>
+<div class="pub-card">
+<div class="pub-title">
+Sleep disruption moderates the daily dynamics of affect and pain in sickle cell disease
+</div>
+<div class="pub-venue">
+Journal of Pain
+</div>
+<div class="pub-links">
+<a href="https://www.sciencedirect.com/science/article/abs/pii/S1526590024003523" target="_blank">Paper</a>
+</div>
+</div>
 
 </div>
 
 <script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.dropotron.min.js"></script>
 <script src="assets/js/main.js"></script>
 
 </body>
