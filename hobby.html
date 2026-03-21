@@ -1,9 +1,4 @@
 <!DOCTYPE HTML>
-<!--
-    Telemetry by Pixelarity
-    pixelarity.com | hello@pixelarity.com
-    License: pixelarity.com/license
--->
 <html>
 <head>
     <!-- Google tag (gtag.js) -->
@@ -49,7 +44,7 @@
             color: var(--text);
         }
 
-        /* Header: kept consistent with index page */
+        /* Header: same as index page */
         #header {
             backdrop-filter: blur(10px);
             -webkit-backdrop-filter: blur(10px);
@@ -128,6 +123,14 @@
             color: var(--muted);
         }
 
+        .section-divider {
+            max-width: 1100px;
+            margin: 0 auto 2rem auto;
+            height: 1px;
+            background: rgba(15, 23, 42, 0.06);
+            border: none;
+        }
+
         /* Hobby grid */
         .hobby-grid {
             max-width: 1100px;
@@ -160,7 +163,7 @@
 
         .hobby-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 24px 60px rgba(15, 23, 42, 0.14);
+            box-shadow: 0 25px 60px rgba(37, 99, 235, 0.15);
             border-color: rgba(37, 99, 235, 0.18);
         }
 
@@ -174,7 +177,7 @@
             content: "";
             position: absolute;
             inset: 0;
-            background: linear-gradient(to top, rgba(15, 23, 42, 0.18), transparent 50%);
+            background: linear-gradient(to top, rgba(15, 23, 42, 0.25), transparent 52%);
             pointer-events: none;
         }
 
@@ -184,10 +187,23 @@
             object-fit: cover;
             display: block;
             transition: transform 0.5s ease;
+            animation: floatImage 6s ease-in-out infinite;
         }
 
         .hobby-card:hover img {
             transform: scale(1.06);
+        }
+
+        .overlay-title {
+            position: absolute;
+            left: 16px;
+            bottom: 14px;
+            z-index: 2;
+            color: white;
+            font-size: 1.08rem;
+            font-weight: 700;
+            letter-spacing: 0.01em;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.35);
         }
 
         .hobby-content {
@@ -206,8 +222,9 @@
 
         .hobby-card h3 {
             margin: 0 0 0.55rem 0;
-            font-size: 1.35rem;
+            font-size: 1.45rem;
             font-weight: 700;
+            letter-spacing: -0.3px;
             line-height: 1.25;
             color: #0f172a;
         }
@@ -232,6 +249,11 @@
                 opacity: 1;
                 transform: translateY(0);
             }
+        }
+
+        @keyframes floatImage {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-6px); }
         }
 
         @media screen and (max-width: 980px) {
@@ -277,7 +299,6 @@
 
 <body id="top">
 
-    <!-- Header -->
     <header id="header">
         <div class="logo">
             <a href="index.html">Sameer Neupane</a>
@@ -309,11 +330,14 @@
             </p>
         </section>
 
+        <hr class="section-divider">
+
         <section class="hobby-grid">
 
             <article class="hobby-card">
                 <div class="hobby-image-wrap">
                     <img src="images/img/hobby/football.jpg" alt="Sports">
+                    <div class="overlay-title">Sports</div>
                 </div>
                 <div class="hobby-content">
                     <div class="hobby-label">Active Life</div>
@@ -325,6 +349,7 @@
             <article class="hobby-card">
                 <div class="hobby-image-wrap">
                     <img src="images/img/hobby/hike1.jpg" alt="Hiking">
+                    <div class="overlay-title">Hiking</div>
                 </div>
                 <div class="hobby-content">
                     <div class="hobby-label">Outdoors</div>
@@ -336,6 +361,7 @@
             <article class="hobby-card">
                 <div class="hobby-image-wrap">
                     <img src="images/camping/tent.jpg" alt="Camping">
+                    <div class="overlay-title">Camping</div>
                 </div>
                 <div class="hobby-content">
                     <div class="hobby-label">Adventure</div>
@@ -347,6 +373,7 @@
             <article class="hobby-card">
                 <div class="hobby-image-wrap">
                     <img src="images/img/hobby/documentaries.jpg" alt="Documentaries">
+                    <div class="overlay-title">Documentaries</div>
                 </div>
                 <div class="hobby-content">
                     <div class="hobby-label">Curiosity</div>
@@ -358,6 +385,7 @@
             <article class="hobby-card">
                 <div class="hobby-image-wrap">
                     <img src="images/img/hobby/book.jpg" alt="Reading Books">
+                    <div class="overlay-title">Books</div>
                 </div>
                 <div class="hobby-content">
                     <div class="hobby-label">Learning</div>
@@ -369,6 +397,7 @@
             <article class="hobby-card">
                 <div class="hobby-image-wrap">
                     <img src="images/drawing/sunset.jpg" alt="Drawing">
+                    <div class="overlay-title">Drawing</div>
                 </div>
                 <div class="hobby-content">
                     <div class="hobby-label">Creativity</div>
@@ -380,11 +409,10 @@
         </section>
 
         <div class="footer-note">
-            This page uses the same header and visual system as the redesigned index and projects pages for consistency.
+            This page uses the same header and visual system as the redesigned index and portfolio pages.
         </div>
     </main>
 
-    <!-- Scripts -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/jquery.dropotron.min.js"></script>
     <script src="assets/js/jquery.scrollex.min.js"></script>

@@ -1,288 +1,222 @@
 <!DOCTYPE HTML>
-<!--
-	Telemetry by Pixelarity
-	pixelarity.com | hello@pixelarity.com
-	License: pixelarity.com/license
--->
 <html>
-	<head>
-		<!-- Global site tag (gtag.js) - Google Analytics -->
-		<!-- Google tag (gtag.js) -->
+<head>
+
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-MSVV9QXYMJ"></script>
 <script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-MSVV9QXYMJ');
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MSVV9QXYMJ');
 </script>
 
-<title>Sameer Neupane</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
-		<!--[if lte IE 9]><link rel="stylesheet" href="assets/css/ie9.css" /><![endif]-->
+<title>Sameer Neupane | CV</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
 
-		<style>
-			/* Container for better alignment */
-			.content-container {
-				max-width: 900px; /* Limits width for readability */
-				margin: 120px auto; /* Centers the content with top margin */
-				padding: 20px; /* Adds padding around */
-				background-color: #ffffff; /* White background */
-				border-radius: 10px; /* Rounded corners */
-				box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-			}
-		
-			table {
-    width: 100%;
-    border-collapse: collapse;
-    font-family: Arial, sans-serif;
-    font-size: 1rem;
-    line-height: 1.6;
+<link rel="stylesheet" href="assets/css/main.css" />
+
+<style>
+:root {
+    --bg1:#f4f7fb;
+    --bg2:#eef2ff;
+    --card:rgba(255,255,255,0.9);
+    --text:#1f2937;
+    --muted:#64748b;
+    --primary:#2563eb;
+    --shadow:0 20px 50px rgba(15,23,42,0.12);
 }
 
-/* Table Row Styling */
-tr:nth-child(even) {
-    background-color: #f9f9f9; /* Alternating row colors */
+body {
+    background:
+        radial-gradient(circle at top left, rgba(37,99,235,0.08), transparent 30%),
+        radial-gradient(circle at top right, rgba(99,102,241,0.08), transparent 25%),
+        linear-gradient(135deg,var(--bg1),var(--bg2));
+    color:var(--text);
 }
 
-/* Left Column Styling */
-td:first-child {
-    font-weight: bold;
-    font-size: 1.1rem; /* Larger font for section headers */
-    width: 30%;
-    background-color: #e6e6e6; /* Light gray for section headers */
-    border-right: 3px solid #d9d9d9;
-    padding: 20px 25px; /* Extra padding for readability */
+/* HEADER SAME AS INDEX */
+#header {
+    backdrop-filter: blur(10px);
+    background: rgba(255,255,255,0.75);
+    border-bottom:1px solid rgba(255,255,255,0.35);
+    box-shadow:0 8px 24px rgba(0,0,0,0.05);
 }
 
-/* Right Column Styling */
-td {
-    padding: 20px 25px;
-    vertical-align: top;
-    color: #333; /* Darker text for better contrast */
+#header .logo a,
+#header .logo span,
+#header #nav a {
+    color:#1f2937 !important;
 }
 
-/* List Items */
+#header #nav a:hover {
+    color:var(--primary) !important;
+}
+
+/* LAYOUT */
+.container {
+    max-width:1100px;
+    margin:auto;
+    padding:100px 20px 50px;
+}
+
+/* HERO */
+.hero {
+    background:var(--card);
+    padding:30px;
+    border-radius:20px;
+    box-shadow:var(--shadow);
+    margin-bottom:30px;
+}
+
+.hero h1 {
+    font-size:2.6rem;
+    margin-bottom:10px;
+}
+
+.hero p {
+    color:var(--muted);
+}
+
+/* SECTION */
+.section {
+    margin-bottom:30px;
+}
+
+.section h2 {
+    font-size:1.5rem;
+    margin-bottom:15px;
+    border-left:4px solid var(--primary);
+    padding-left:10px;
+}
+
+/* CARD */
+.card {
+    background:var(--card);
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.05);
+}
+
+/* LIST */
 ul {
-    padding-left: 20px;
-    margin: 10px 0;
+    padding-left:20px;
 }
 
 li {
-    margin-bottom: 10px; /* Increased spacing between list items */
+    margin-bottom:8px;
+    line-height:1.6;
 }
 
-/* Links */
 a {
-    color: #007bff;
-    text-decoration: none;
-    font-weight: bold;
+    color:var(--primary);
+    text-decoration:none;
+    font-weight:500;
 }
 
 a:hover {
-    text-decoration: underline;
+    text-decoration:underline;
 }
+</style>
 
-			
-		</style>
-	</head>
-	<body id="top">
+</head>
 
-		<!-- Header -->
-		<header id="header">
+<body>
 
-			<!-- Logo -->
-				<div class="logo">
-					<a href="index.html">Sameer Neupane</a><span> The <a href=""https://mdotcenter.org/" target="_blank">mDOT Center</a> at <a href="https://www.memphis.edu" target="_blank">The University of Memphis</a> </span>
-				</div>
+<header id="header">
+    <div class="logo">
+        <a href="index.html">Sameer Neupane</a>
+        <span>
+            The <a href="https://techlab.ucsf.edu/" target="_blank">UCSF TECH Lab</a>
+            at <a href="https://www.ucsf.edu/" target="_blank">UCSF</a>
+        </span>
+    </div>
 
+    <nav id="nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="activities.html">Research Activities</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="hobby.html">Hobby</a></li>
+            <li><a href="cv.html">CV</a></li>
+            <li><a href="Publications.html">Publications</a></li>
+        </ul>
+    </nav>
+</header>
 
-			<!-- Nav -->
-				<nav id="nav">
-					<ul>
-						<li><a href="index.html">Home</a></li>
-						<li><a href="projects.html">Research Activities</a></li>
-						<li><a href="projects.html">Projects</a></li>
-				
-						<li><a href="hobby.html">Hobby</a></li>
-						<li><a href="cv.html">CV</a></li>
-				
-						<li><a href="Publications.html">Publications</a></li>
-					</ul>
-				</nav>
+<div class="container">
 
-		</header>
+<div class="hero">
+    <h1>Curriculum Vitae</h1>
+    <p>Postdoctoral Scholar · AI, Wearables, Mental Health</p>
+</div>
 
-		<div class="content-container">
-			<table>
-				<tr>
-					<td>Research Interests</td>
-					<td>Mobile Health, Wearables, Human-Computer Interaction, Machine Learning, AI, LLMs, and Data Visualizations</td>
-				</tr>
-				
-				<tr>
-					<td>Education</td>
-					<td>
-						<ul>
-							<li><strong>University of Memphis</strong> <br> PhD in Computer Science <br> Aug 2018 – Dec 2025</li>
-							<li><strong>University of Memphis</strong> <br> MS in Computer Science <br> Aug 2018 – Dec 2025</li>
-							<li><strong>Jawaharlal Nehru Technological University Anantapur (JNTUA)</strong>  <br> B.Tech in Electronics and Communication Engineering <br> June 2010 - June 2014</li>
-						</ul>
-					</td>
-				</tr>
-		
-				<tr>
-					<td><strong>Experience</strong></td>
-					<td>
-						
-						<strong><b>University of California San Francisco (Postdoctoral Scholar, Feb 2026 - Present)</b></strong>
-								<ul>
-							<li>Developing multimodal, self-supervised AI models that integrate wearable biosignals and behavioral data to enable real-time detection of depression and anxiety, with validation against clinical assessments (e.g., PHQ-9, GAD-7).</li>						
-							<li>Building deep learning models for multi-label classification of ADHD and autism spectrum disorder (ASD), generating interpretable outputs using both crowd-sourced annotations and automated models (e.g., large language models).</li>						
-							<li>Designing AI-driven frameworks for timely, personalized mental health interventions in daily life, including EMA-informed, context-aware prompting systems.</li>						
-							<li>Modeling stress-related cigarette cravings using wearable and contextual data to support adaptive, preventive interventions for smoking and nicotine cessation.</li>
-						</ul>
-						<strong><b>University of Memphis (Graduate Research Assistant, Aug 2018 - Dec 2025)</b></strong>
-						<ul>
-							<li>Leading the <a href="https://reliefstudy.mdotcenter.org" target="_blank">RELIEF Study</a>, integrating wearable AI and LLMs for personalized stress interventions.</li>
-							<li>Led the nationwide <a href="https://moods.md2k.org/" target="_blank">MOODS Study</a> with 122 participants over 100 days, achieving a 10% reduction in self-reported stress and 14 behavior modifications (<a href="https://dl.acm.org/doi/10.1145/3613904.3642662" target="_blank">CHI 2024</a>).</li>
-							<li>Developed <a href="https://moods.md2k.org/results" target="_blank">a Personal Informatics System</a> with 16 visualizations to promote self-reflection and user engagement.</li>
-							<li>Developed the AI-Triggered Prompting (ATP) framework to optimize prompt timing and predict personalized stressor listings, minimizing interruptions and response burden.</li>
-							<li>Co-author of Pulse-PPG, the first open-source PPG foundation model trained on field data, demonstrating superior generalization across clinical and mobile health applications (<a href="https://arxiv.org/pdf/2502.01108" target="_blank">Paper</a>).</li>
-							<li>Conducted a duoethnographic study on wearable-integrated LLM chatbots for stress management, showing that brief, tailored interventions are more effective than generic ones.</li>
-							<li>Designed and implemented a dashboard utilizing LLM-assisted evaluations to rank models (GPT-4o, Claude-Sonnet, LLaMA3-8B) based on their ability in generating stress management interventions (<a href="https://github.com/sameerthereds/EvaluLLM" target="_blank">GitHub</a>).</li>
-							<li>Developed a framework for evaluating Named Entity Recognition (NER) tasks in Nepali sentences using LLMs (<a href="https://github.com/sameerthereds/NER-for-Nepali-sentences-using-LLMs" target="_blank">GitHub</a>).</li>
-							<li>Collaborated with researchers at Johns Hopkins University on a field study analyzing the influence of affect and sleep on pain management in sickle cell patients (<a href="https://www.sciencedirect.com/science/article/abs/pii/S1526590024003523" target="_blank">Journal of Pain 2024</a>).</li>
-						</ul>
-				
-						<strong><b>OpenText, Hyderabad, India (Senior Software Engineer, June 2014 - May 2018)</b></strong>
-						<ul>
-							<li>Developed enterprise-level medical records image capture and retrieval software using Microsoft .NET, used by major healthcare organizations, including Mayo Clinic.</li>
-							<li>Engineered solutions to implement roadmap initiatives and customer-driven feature requests, delivering enhancements that improved product performance and user satisfaction.</li>
-						</ul>
-					</td>
-				</tr>
-		
-				<tr>
-					<td><strong>Projects</strong></td>
-					<td>
-						<ul>
-							<li>Designed and implemented a <a href="https://github.com/sameerthereds/Movie-Recommendation-System" target="_blank">movie recommendation system</a> using content-based and collaborative filtering.</li>
-							<li>Developed a <a href="https://github.com/sameerthereds/Twitter-Sentiment-Analysis-of-Tweets-about-COVID-19-vaccine" target="_blank">sentiment analysis model</a> for analyzing public perception of COVID-19 vaccines.</li>
-							<li>Built a <a href="https://github.com/sameerthereds/Custom-Search-Engine--NLP-" target="_blank">custom search engine</a> using NLP for University of Memphis students and staff.</li>
-							<li>Designed and developed a Wireless Multi-axis Alive Human Detecting Robot for rescue operations and data acquisition.</li>
-						</ul>
-					</td>
-				</tr>
-			
-				<tr>
-					<td><strong>Skills</strong></td>
-					<td>
-						<ul>
-							<li><strong>Languages:</strong> Python, Java, Microsoft .Net, R, SQL, Oracle, LaTeX, Matlab</li>
-							<li><strong>Platforms:</strong> NumPy, Scikit-learn, Pandas, PyTorch, TensorFlow, AWS, Git</li>
-							<li><strong>Machine Learning:</strong> Regression, Decision Trees, SVM, Clustering, Anomaly Detection, Time-series models</li>
-							<li><strong>Deep Learning:</strong> CNNs, RNNs, Autoencoders, Transformers, Large Language Models (LLMs)</li>
-							<li><strong>Sensor Data Processing:</strong> GPS, ECG, Accelerometer, PPG</li>
-							<li><strong>Statistical Methods:</strong> Hypothesis testing, A/B testing, Linear mixed models</li>
-						</ul>
-					</td>
-				</tr>
-			
-				<tr>
-					<td><strong>Certifications</strong></td>
-					<td>
-						<ul>
-							<li><a href="https://www.coursera.org/account/accomplishments/certificate/XHEQNYWC8TEX" target="_blank">Generative AI with Large Language Models (Coursera - DeepLearning.AI)</a></li>
-							<li><a href="https://www.coursera.org/account/accomplishments/specialization/4UFV6M2SXF2S" target="_blank">Deep Learning Specialization (Coursera - DeepLearning.AI)</a></li>
-							<li><a href="https://www.credly.com/badges/7902265e-9130-4f8c-92c7-7b6286a0eb3b" target="_blank">Deep Neural Networks with PyTorch (Coursera - IBM)</a></li>
-							<li><a href="https://www.coursera.org/account/accomplishments/verify/356935GUWVS8" target="_blank">Sequences, Time Series and Prediction (Coursera - DeepLearning.AI)</a></li>
-							<li><a href="https://www.coursera.org/account/accomplishments/certificate/LDK4JEJ2HYHW" target="_blank">Machine Learning with Python (Coursera - IBM)</a></li>
-							<li><a href="https://www.coursera.org/account/accomplishments/verify/8WTMCJZEJVN9" target="_blank">Structuring Machine Learning Projects (Coursera - DeepLearning.AI)</a></li>
-						</ul>
-					</td>
-				</tr>
-			
-				<tr>
-					<td><strong>Recognition, Honors, and Awards</strong></td>
-					<td>
-						<ul>
-							<li><strong>GSA Top 20 Under 35 Award</strong>, University of Memphis, 2024</li>
-							<li><strong>Celebrate Student Success Award</strong>, University of Memphis, 2024</li>
-							<li><strong>First Prize</strong> at the 36th Annual Student Research Forum, University of Memphis, 2024</li>
-							<li><strong>Second Place</strong> at the 19th CS Research Symposium, University of Memphis, 2024</li>
-							<li><strong>GSA Travel Grants</strong>, University of Memphis, 2024</li>
-							<li><strong>RISE Doctoral Fellow</strong>, University of Memphis, 2024</li>
-							<li><strong>Scholarship for Bachelor's Degree</strong>, Ministry of External Affairs (India), 2010</li>
-							<li><strong>Mahatma Gandhi Scholarship</strong>, Ministry of External Affairs (India), 2008</li>
-						</ul>
-					</td>
-				</tr>
-			
-				<tr>
-					<td><strong>Services/Volunteering</strong></td>
-					<td>
-						<ul>
-							<li>Mentored 2 Ph.D. students (University of Memphis) and 3 software interns (OpenText)</li>
-							<li>Organizer of the first Nepali Nights at the University of Memphis, 2022</li>
-							<li>First prize in the Memphis city soccer tournament with a team involving players from 6 different countries, 2022</li>
-							<li>Member of OpenText’s DOST team conducting CSR activities, including Blood Donation, 2017</li>
-							<li>Taught primary grade students in a local school (Hyderabad, India), 2016</li>
-						</ul>
-					</td>
-				</tr>
-			
-				<tr>
-					<td><strong>Selected Publications</strong></td>
-					<td>
-						<ul>
-							<li>Neupane, S., et al., (2024). <i>Momentary Stressor Logging and Reflective Visualizations.</i> CHI Conference on Human Factors in Computing Systems.</li>
-							<li>Ellis, J.D., Samiei, S., <strong>Neupane, S.</strong>, et al., (2024). <i>Sleep disruption moderates the daily dynamics of affect and pain in sickle cell disease.</i> The Journal of Pain.</li>
-							<li>Saha, M., Xu, M. A., Mao, W., <strong>Neupane, S.</strong>, et al. (2025). <i>Pulse-PPG: An Open-Source Field-Trained PPG Foundation Model.</i> arXiv preprint arXiv:2502.01108.</li>
-						</ul>
-					</td>
-				</tr>
-			
-				<tr>
-					<td><strong>Peer Reviews</strong></td>
-					<td>
-						<ul>
-							<li><strong>Total Papers Reviewed: 12</strong></li>
-							<li><strong>Invitations Through PhD Advisor (8):</strong> Proceedings of the ACM on Interactive, Mobile, Wearable, and Ubiquitous Technologies (2020-2025)</li>
-							<li><strong>Direct Invitations Through Journal Editors (6):</strong>
-								<ul>
-									<li>Proceedings of the ACM on Interactive, Mobile, Wearable, and Ubiquitous Technologies (2024, 2025)</li>
-									<li>ACM CHI Conference on Human Factors in Computing Systems (2025)</li>
-									<li>ACM CHI Extended Abstracts (2025)</li>
-									<li>ACM Transactions on Computing for Healthcare (2024)</li>
-									<li>Australian Conference on Human-Computer Interaction (2023)</li>
-								</ul>
-							</li>
-						</ul>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<!-- Main -->
-	
+<div class="section">
+    <h2>Research Interests</h2>
+    <div class="card">
+        Mobile Health, Wearables, HCI, Machine Learning, LLMs, Data Visualization
+    </div>
+</div>
 
-		
+<div class="section">
+    <h2>Education</h2>
+    <div class="card">
+        <ul>
+            <li><b>PhD, Computer Science</b> — University of Memphis (2018–2025)</li>
+            <li><b>MS, Computer Science</b> — University of Memphis</li>
+            <li><b>B.Tech, ECE</b> — JNTUA (2010–2014)</li>
+        </ul>
+    </div>
+</div>
 
+<div class="section">
+    <h2>Experience</h2>
+    <div class="card">
+        <ul>
+            <li><b>UCSF — Postdoctoral Scholar (2026–Present)</b></li>
+            <li><b>University of Memphis — Research Assistant (2018–2025)</b></li>
+            <li><b>OpenText — Senior Software Engineer (2014–2018)</b></li>
+        </ul>
+    </div>
+</div>
 
-			<!-- Scripts -->
-				<script src="assets/js/jquery.min.js"></script>
-				<script src="assets/js/jquery.dropotron.min.js"></script>
-				<script src="assets/js/jquery.scrollex.min.js"></script>
-				<script src="assets/js/jquery.scrolly.min.js"></script>
-				<script src="assets/js/jquery.selectorr.min.js"></script>
-				<script src="assets/js/skel.min.js"></script>
-				<script src="assets/js/util.js"></script>
-				<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
-				<script src="assets/js/main.js"></script>
+<div class="section">
+    <h2>Selected Projects</h2>
+    <div class="card">
+        <ul>
+            <li>RELIEF Study — Wearable + LLM stress interventions</li>
+            <li>MOODS Study — 100-day field study</li>
+            <li>Personal Informatics System (16 visualizations)</li>
+            <li>NER for Nepali using LLMs</li>
+        </ul>
+    </div>
+</div>
 
-		</body>
-	</html>
+<div class="section">
+    <h2>Skills</h2>
+    <div class="card">
+        <ul>
+            <li>Python, Java, SQL, R, PyTorch, TensorFlow</li>
+            <li>Machine Learning, Deep Learning, NLP, Time Series</li>
+        </ul>
+    </div>
+</div>
+
+<div class="section">
+    <h2>Awards</h2>
+    <div class="card">
+        <ul>
+            <li>Top 20 Under 35 — University of Memphis</li>
+            <li>RISE Doctoral Fellow</li>
+            <li>First Prize — Research Forum</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/main.js"></script>
+
+</body>
+</html>
