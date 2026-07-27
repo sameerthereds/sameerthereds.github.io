@@ -299,6 +299,116 @@
             font-size: 1.1rem;
         }
     }
+
+    .timeline-section {
+        max-width: 1180px;
+        margin: 0 auto 70px auto;
+        padding: 50px;
+        background: var(--card);
+        border: 1px solid rgba(255,255,255,0.45);
+        backdrop-filter: blur(14px);
+        border-radius: var(--radius);
+        box-shadow: var(--shadow);
+        position: relative;
+    }
+
+    .timeline-section h2 {
+        font-size: 2rem;
+        color: #0f172a;
+        margin-bottom: 8px;
+    }
+
+    .timeline-section .section-subtitle {
+        color: var(--muted);
+        margin-bottom: 40px;
+        font-size: 1.02rem;
+    }
+
+    .timeline {
+        position: relative;
+        padding-left: 40px;
+    }
+
+    .timeline::before {
+        content: "";
+        position: absolute;
+        left: 9px;
+        top: 6px;
+        bottom: 6px;
+        width: 2px;
+        background: linear-gradient(180deg, var(--primary), rgba(37,99,235,0.15));
+    }
+
+    .timeline-item {
+        position: relative;
+        padding-bottom: 40px;
+    }
+
+    .timeline-item:last-child {
+        padding-bottom: 0;
+    }
+
+    .timeline-dot {
+        position: absolute;
+        left: -40px;
+        top: 4px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: white;
+        border: 3px solid var(--primary);
+        box-shadow: 0 4px 10px rgba(37,99,235,0.25);
+    }
+
+    .timeline-item.current .timeline-dot {
+        background: var(--primary);
+        box-shadow: 0 0 0 6px rgba(37,99,235,0.15);
+    }
+
+    .timeline-date {
+        display: inline-block;
+        font-size: 0.85rem;
+        font-weight: 600;
+        color: var(--primary-dark);
+        background: rgba(37,99,235,0.10);
+        padding: 4px 12px;
+        border-radius: 999px;
+        margin-bottom: 8px;
+    }
+
+    .timeline-item h3 {
+        font-size: 1.2rem;
+        color: #0f172a;
+        margin-bottom: 4px;
+    }
+
+    .timeline-item .timeline-org {
+        color: var(--muted);
+        font-weight: 600;
+        margin-bottom: 8px;
+        font-size: 0.95rem;
+    }
+
+    .timeline-item p {
+        color: var(--muted);
+        line-height: 1.7;
+        font-size: 0.98rem;
+    }
+
+    @media screen and (max-width: 640px) {
+        .timeline-section {
+            padding: 30px 20px;
+            margin: 0 18px 50px 18px;
+        }
+
+        .timeline {
+            padding-left: 32px;
+        }
+
+        .timeline-dot {
+            left: -32px;
+        }
+    }
 </style>
 
 	</head>
@@ -411,7 +521,47 @@
 		</div>
 	
 	</section>
-  
+
+	<!-- Timeline Section -->
+	<section id="timeline" class="timeline-section">
+		<h2>Career Timeline</h2>
+		<p class="section-subtitle">A brief journey through my academic and professional path.</p>
+
+		<div class="timeline">
+			<div class="timeline-item current">
+				<span class="timeline-dot"></span>
+				<span class="timeline-date">Feb 2026 – Present</span>
+				<h3>Postdoctoral Scholar</h3>
+				<div class="timeline-org">UCSF TECH Lab, University of California, San Francisco</div>
+				<p>Developing multimodal, self-supervised AI models that integrate wearable biosignals and behavioral data for real-time detection of depression and anxiety, human-in-the-loop AI for ADHD/ASD assessment, and just-in-time adaptive interventions.</p>
+			</div>
+
+			<div class="timeline-item">
+				<span class="timeline-dot"></span>
+				<span class="timeline-date">Sep 2018 – Dec 2025</span>
+				<h3>Ph.D. in Computer Science</h3>
+				<div class="timeline-org">University of Memphis · mDOT Center · Advisor: Dr. Santosh Kumar</div>
+				<p>Led wearable-based stress sensing studies including the MOODS Study (CHI'24) and RELIEF Study (CHI-EA'25), developing AI-driven interventions, LLM chatbots, and interactive visualizations for stress management.</p>
+			</div>
+
+			<div class="timeline-item">
+				<span class="timeline-dot"></span>
+				<span class="timeline-date">Jul 2014 – May 2018</span>
+				<h3>Senior Software Engineer</h3>
+				<div class="timeline-org">OpenText, Hyderabad, India</div>
+				<p>Developed enterprise-level medical records image capture and retrieval software for major healthcare organizations, and mentored a team of software interns.</p>
+			</div>
+
+			<div class="timeline-item">
+				<span class="timeline-dot"></span>
+				<span class="timeline-date">Aug 2010 – Jun 2014</span>
+				<h3>B.Tech in Electronics & Communication Engineering</h3>
+				<div class="timeline-org">Jawaharlal Nehru Technological University, Anantapur, India</div>
+				<p>Graduated with a Mahatma Gandhi Scholarship for Bachelor's Degree from the Ministry of External Affairs, India.</p>
+			</div>
+		</div>
+	</section>
+
 	  <!-- FontAwesome for Icons -->
 	 
 		<!-- Main -->
